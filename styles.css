@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Bangers", system-ui;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  background-size: cover; /*Cobrir a tela toda*/
+  background-position: center;
+}
+
+.nome {
+  color: #ff3cac;
+  font-size: 360px;
+  position: absolute;
+  bottom: 600px;
+  text-align: center; /*Centralizar*/
+  width: 100%; /*Para pegar toda a largura*/
+}
+
+.personagem {
+  position: absolute;
+  bottom: 0;
+  height: 700px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.textos {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.etiqueta {
+  font-size: 26px;
+  color: #ffd319;
+}
+
+h1 {
+  font-size: 72px;
+  color: #ffffff;
+}
+
+.texto-apoio {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.menu {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap:15px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover; /*Como o objeto se encaixa*/
+  object-position: top;
+  border: 2px solid #ffffff;
+}
+
+.voce {
+  background-color: #ffd319;
+  padding: 20px; /*Espaçamento interno*/
+  border-radius: 50%;
+}
