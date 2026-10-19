@@ -6,3 +6,20 @@ function escolherPersonagem(nomePersonagem, imagemPersonagem, colorPersonagem) {
     personagem.src = imagemPersonagem
     nome.style.color = colorPersonagem
 }
+
+function lerFoto(foto) {
+    let leitor = new FileReader()
+    leitor.readAsDataURL(foto.files[0]) // readAsDataURL - fiz a leitura da foto e transformei em texto
+    leitor.onload = async function() {
+        let desenho = await puter.ai.txt2img('Transforme a pessoa desta foto em videogame: contorno preto grosso, cores vivas, meio corpo, mantendo o rosto parecido. Fundo totalmente transparente: sem cenario, sem chão e sem sombra', 
+            {
+                model: "replicate:openai/gpt-image-2.5-flare",
+                provider: "openai",
+                input_image: leitor.result,
+                quality: "medium",
+                providerOptions: {background: "transparent"}
+            })
+        escolherPersonagem('Você', desenho, '#b9b604')
+
+    } // quando carrega algo, faça algo
+}
